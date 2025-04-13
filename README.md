@@ -92,7 +92,9 @@ This is your actual website file.
        - Provider: AWS CodeDeploy
        - Application: MyWebAppApp
        - Deployment Group: MyWebAppDG
-       ![Screenshot 2025-04-13 173931](https://github.com/user-attachments/assets/b60028d6-7031-418d-9c70-5d2861ba77ae)
+       
+       
+![Screenshot 2025-04-13 173931](https://github.com/user-attachments/assets/b60028d6-7031-418d-9c70-5d2861ba77ae)
 
        
 - 🔹 **STEP 8: Final Output Check**
