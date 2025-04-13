@@ -44,6 +44,8 @@ This is your actual website file.
 - Name it: EC2CodeDeployRole
   - Attach this role to your EC2 instance:
   - EC2 → Actions → Security → Modify IAM Role → Select EC2CodeDeployRole
+![image](https://github.com/user-attachments/assets/02e5ae7d-72ce-422b-bdc6-c6f3cdeb4213)
+
 ![image](https://github.com/user-attachments/assets/f3659ae9-ee9f-4136-925c-fbb80c036074)
 
 -🔹**STEP 4: Create CodeCommit Repository**
@@ -110,68 +112,4 @@ This is your actual website file.
 - Output
 
 - ![image](https://github.com/user-attachments/assets/adc524ea-a42e-41fb-9954-1986b67b16af)
-
-
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/02e5ae7d-72ce-422b-bdc6-c6f3cdeb4213)
-![Screenshot 2025-04-13 145926](https://github.com/user-attachments/assets/f2384df1-73cf-4eaf-922f-8ac6023fa342)
-
-- 🧱 Step 1: ✅ Create CodeBuild Project
-Go to AWS Console → CodeBuild
-
-Click Create build project
-- 🔹 STEP 2: Create CodeCommit Repo
-    - Go to CodeCommit → Create repository
-    - ![image](https://github.com/user-attachments/assets/ba1952ae-7d85-4402-8e64-1a749b3ef088)
-    - Name it: my-web-app-repo
-    - ![image](https://github.com/user-attachments/assets/ff95128d-d441-41fa-bad3-230124cfc88d)
-    - Clone the repo locally or upload your files directly using Git.
-    - Sample index.html:
-    - <!DOCTYPE html>
-        <html>
-         <head><title>My Web App</title></head>
-         <body><h1>Hello from CodePipeline!</h1></body>
-       </html>
-
-
-![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
-✅ Final Review Summary:
-- Pipeline Name: My-repo
-
-- Source Provider: GitHub (via GitHub App)
-    - Connected to repo: sangeetha190/AWS-Task-5
-    - Default branch: main
-- Build Stage:
-    - Just running a sample shell command (echo "Hello World") — this is fine for now.
-- Deploy Stage:
-    - CodeDeploy with Application: MyWebAppApp
-    - Deployment Group: MyWebAppDG
-    - Region: ap-south-1 ✅
-    - Rollback enabled on failure
-- 🎯 Yes, you can now click Create Pipeline.
-- ![image](https://github.com/user-attachments/assets/c22d2f57-ba18-4b7c-9226-bb7bc70ec75b)
-- ![image](https://github.com/user-attachments/assets/2f6eb14a-de68-43d5-96a2-670b7a1081ea)
-- ![image](https://github.com/user-attachments/assets/ea027609-816e-4a64-8b4d-58f59a9987ac)
-
-![image](https://github.com/user-attachments/assets/ba227dc1-971d-475b-88b6-abd963c72893)
-
-attach the role 
-![image](https://github.com/user-attachments/assets/f3659ae9-ee9f-4136-925c-fbb80c036074)
-![image](https://github.com/user-attachments/assets/2b2f2ed7-46ad-4f82-b646-3753f68ad9a1)
-
-![image](https://github.com/user-attachments/assets/6ea3aef4-4277-4edf-89a3-1baa78c9bb5b)
-
-
-
-![image](https://github.com/user-attachments/assets/4925ba31-48fe-4151-8c9d-cc02155be0c2)
-
-Output
-![image](https://github.com/user-attachments/assets/adc524ea-a42e-41fb-9954-1986b67b16af)
-
 
