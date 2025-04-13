@@ -25,13 +25,12 @@ This is your actual website file.
       - ![image](https://github.com/user-attachments/assets/e1283659-7507-4d41-84ca-5fb79f9d68cb)
 
 - 📄 **File 3: appspec.yml**
-      ![image](https://github.com/user-attachments/assets/a6f5ac5b-f8aa-4f76-b78e-038405c594ac)
+      - ![image](https://github.com/user-attachments/assets/a6f5ac5b-f8aa-4f76-b78e-038405c594ac)
 
 - 📄 **File 4: scripts/install_dependencies.sh (Optional)**
       - You can use this if you want to install or prepare anything during deployment.
-      ![image](https://github.com/user-attachments/assets/e135d39f-4137-498b-a3a8-027038b2646b)
-
-![image](https://github.com/user-attachments/assets/c19e854a-4c0a-46d7-83cf-d4b8b0ef5eb1)
+      - ![image](https://github.com/user-attachments/assets/e135d39f-4137-498b-a3a8-027038b2646b)
+      - ![image](https://github.com/user-attachments/assets/c19e854a-4c0a-46d7-83cf-d4b8b0ef5eb1)
 
 - 🔹**STEP 3: Create IAM Role for EC2**
      - Go to IAM → Roles → Create role
