@@ -105,9 +105,11 @@ This is your actual website file.
       - Visit: http://3.110.90.253/
       - You will see your deployed index.html page! 🎉
 
-       - ![image](https://github.com/user-attachments/assets/4925ba31-48fe-4151-8c9d-cc02155be0c2)
-       - Output
-       - ![image](https://github.com/user-attachments/assets/adc524ea-a42e-41fb-9954-1986b67b16af)
+ ![image](https://github.com/user-attachments/assets/4925ba31-48fe-4151-8c9d-cc02155be0c2)
+    
+- Output
+
+- ![image](https://github.com/user-attachments/assets/adc524ea-a42e-41fb-9954-1986b67b16af)
 
 
 
