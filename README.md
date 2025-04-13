@@ -77,12 +77,10 @@ This is your actual website file.
        - IAM Role: Create or select one with full access to CodeBuild
 
 -🔹**STEP 7: Create CodePipeline**
-
-    - Go to CodePipeline → Create pipeline
+- Go to CodePipeline → Create pipeline
     - Pipeline name: MyWebAppPipeline
 
-       - **Source:**
-         - Provider: AWS CodeCommit
+
     - **Source:**
        - Provider: AWS CodeCommit
        - Repo: my-web-app
