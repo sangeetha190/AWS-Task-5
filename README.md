@@ -92,6 +92,8 @@ This is your actual website file.
        - Provider: AWS CodeDeploy
        - Application: MyWebAppApp
        - Deployment Group: MyWebAppDG
+       ![Screenshot 2025-04-13 173931](https://github.com/user-attachments/assets/b60028d6-7031-418d-9c70-5d2861ba77ae)
+
        
 - 🔹 **STEP 8: Final Output Check**
       - Once you push changes to the CodeCommit repo:
@@ -113,6 +115,7 @@ This is your actual website file.
 
 
 ![image](https://github.com/user-attachments/assets/02e5ae7d-72ce-422b-bdc6-c6f3cdeb4213)
+![Screenshot 2025-04-13 145926](https://github.com/user-attachments/assets/f2384df1-73cf-4eaf-922f-8ac6023fa342)
 
 - 🧱 Step 1: ✅ Create CodeBuild Project
 Go to AWS Console → CodeBuild
