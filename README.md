@@ -81,6 +81,8 @@ This is your actual website file.
     - Go to CodePipeline → Create pipeline
     - Pipeline name: MyWebAppPipeline
 
+       - **Source:**
+         - Provider: AWS CodeCommit
     - **Source:**
        - Provider: AWS CodeCommit
        - Repo: my-web-app
