@@ -47,18 +47,19 @@ This is your actual website file.
 ![image](https://github.com/user-attachments/assets/f3659ae9-ee9f-4136-925c-fbb80c036074)
 
 -🔹**STEP 4: Create CodeCommit Repository**
-    - Go to Developer Tools → CodeCommit → Create Repository
-    - Name: my-web-app-repo
-      - ![image](https://github.com/user-attachments/assets/ba1952ae-7d85-4402-8e64-1a749b3ef088)
-      - ![image](https://github.com/user-attachments/assets/ff95128d-d441-41fa-bad3-230124cfc88d)
+    - 1. Go to Developer Tools → CodeCommit → Create Repository
+    - 2. Name: my-web-app-repo
+  ![image](https://github.com/user-attachments/assets/ba1952ae-7d85-4402-8e64-1a749b3ef088)
+  ![image](https://github.com/user-attachments/assets/ff95128d-d441-41fa-bad3-230124cfc88d)
 
 -🔹 **STEP 5: Create CodeDeploy Application & Deployment Group**
     - Go to CodeDeploy → Create application
       - Name: MyWebAppApp
       - Platform: EC2/On-premise
 
-    - ![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
-    - Create Deployment Group:
+  ![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
+  
+  - Create Deployment Group:
         - Name: MyWebAppDG
         - Environment: EC2
         - Tag: Name = CICD (should match EC2 tag)
@@ -108,6 +109,10 @@ This is your actual website file.
 
 
 
+
+
+
+![image](https://github.com/user-attachments/assets/02e5ae7d-72ce-422b-bdc6-c6f3cdeb4213)
 
 - 🧱 Step 1: ✅ Create CodeBuild Project
 Go to AWS Console → CodeBuild
