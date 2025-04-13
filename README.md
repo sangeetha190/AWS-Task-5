@@ -60,6 +60,7 @@ This is your actual website file.
   ![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
   
   - Create Deployment Group:
+       
         - Name: MyWebAppDG
         - Environment: EC2
         - Tag: Name = CICD (should match EC2 tag)
