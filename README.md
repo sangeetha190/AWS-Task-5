@@ -6,11 +6,6 @@
     - Choose Amazon Linux 2 AMI
     - Instance type: t2.micro (Free Tier)
     - Allow HTTP and SSH in security group
-    - Connect using terminal and install Apache:
-        - sudo yum update -y
-        - sudo yum install -y httpd
-        - sudo systemctl start httpd
-        - sudo systemctl enable httpd
         - ![image](https://github.com/user-attachments/assets/ee8d0f2f-87e1-4d04-b0ea-6eaf7c9bc9e2)
 
 - 🔹 STEP 2: Folder Structure You Need:
@@ -20,45 +15,23 @@ my-web-app/
 ├── buildspec.yml
 └── scripts/
     └── install_dependencies.sh
-![image](https://github.com/user-attachments/assets/c19e854a-4c0a-46d7-83cf-d4b8b0ef5eb1)
 
 - 📄 **File 1: index.html**
 This is your actual website file.
-      <!DOCTYPE html>
-       <html>
-             <head>
-               <title>My CI/CD Web App</title>
-             </head>
-      <body>
-          <h1>Hello, Sangeetha! 💜 This is a CodePipeline Deployment</h1>
-      </body>
-      </html>
+      ![image](https://github.com/user-attachments/assets/4010af06-9fd6-4773-af34-66756cc2019b)
+
 - 📄 **File 2: buildspec.yml**
       - Tells CodeBuild how to build your project.
-_version: 0.2
-phases:
-  install:
-    commands:
-      - echo Installing...
-  build:
-    commands:
-      - echo Build completed
-artifacts:
-  files:
-    - '**/*'_
+      - ![image](https://github.com/user-attachments/assets/e1283659-7507-4d41-84ca-5fb79f9d68cb)
+
 - 📄 **File 3: appspec.yml**
-      - Required for CodeDeploy to know where to place files.
-_version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /var/www/html_
+      ![image](https://github.com/user-attachments/assets/a6f5ac5b-f8aa-4f76-b78e-038405c594ac)
+
 - 📄 **File 4: scripts/install_dependencies.sh (Optional)**
       - You can use this if you want to install or prepare anything during deployment.
-_#!/bin/bash
-echo "Dependencies installed successfully"_
-- 🟣 Right now it just echoes a message, but you can later install Node.js, npm, etc.
+      ![image](https://github.com/user-attachments/assets/e135d39f-4137-498b-a3a8-027038b2646b)
 
+![image](https://github.com/user-attachments/assets/c19e854a-4c0a-46d7-83cf-d4b8b0ef5eb1)
 
 - 🔹**STEP 3: Create IAM Role for EC2**
      - Go to IAM → Roles → Create role
@@ -72,15 +45,19 @@ echo "Dependencies installed successfully"_
 - Name it: EC2CodeDeployRole
   - Attach this role to your EC2 instance:
   - EC2 → Actions → Security → Modify IAM Role → Select EC2CodeDeployRole
+![image](https://github.com/user-attachments/assets/f3659ae9-ee9f-4136-925c-fbb80c036074)
 
 -🔹**STEP 4: Create CodeCommit Repository**
     - Go to Developer Tools → CodeCommit → Create Repository
-      - Name: my-web-app
+      - Name: my-web-app-repo
+      - ![image](https://github.com/user-attachments/assets/ba1952ae-7d85-4402-8e64-1a749b3ef088)
+      - ![image](https://github.com/user-attachments/assets/ff95128d-d441-41fa-bad3-230124cfc88d)
 
 -🔹 **STEP 5: Create CodeDeploy Application & Deployment Group**
-     - Go to CodeDeploy → Create application
+    - Go to CodeDeploy → Create application
        - Name: MyWebAppApp
        - Platform: EC2/On-premise
+![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
      - Create Deployment Group:
         - Name: MyWebAppDG
         - Environment: EC2
