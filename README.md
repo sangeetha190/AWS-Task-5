@@ -21,14 +21,14 @@ This is your actual website file.
       ![image](https://github.com/user-attachments/assets/4010af06-9fd6-4773-af34-66756cc2019b)
 
 - 📄 **File 2: buildspec.yml**
-      - Tells CodeBuild how to build your project.
-      - ![image](https://github.com/user-attachments/assets/e1283659-7507-4d41-84ca-5fb79f9d68cb)
+       - Tells CodeBuild how to build your project.
+       - ![image](https://github.com/user-attachments/assets/e1283659-7507-4d41-84ca-5fb79f9d68cb)
 
 - 📄 **File 3: appspec.yml**
-      -  ![image](https://github.com/user-attachments/assets/a6f5ac5b-f8aa-4f76-b78e-038405c594ac)
+       - ![image](https://github.com/user-attachments/assets/a6f5ac5b-f8aa-4f76-b78e-038405c594ac)
 
 - 📄 **File 4: scripts/install_dependencies.sh (Optional)**
-      -  You can use this if you want to install or prepare anything during deployment.
+    - You can use this if you want to install or prepare anything during deployment.
     -  ![image](https://github.com/user-attachments/assets/e135d39f-4137-498b-a3a8-027038b2646b)
     -  ![image](https://github.com/user-attachments/assets/c19e854a-4c0a-46d7-83cf-d4b8b0ef5eb1)
 
@@ -48,16 +48,17 @@ This is your actual website file.
 
 -🔹**STEP 4: Create CodeCommit Repository**
     - Go to Developer Tools → CodeCommit → Create Repository
-      - Name: my-web-app-repo
+    - Name: my-web-app-repo
       - ![image](https://github.com/user-attachments/assets/ba1952ae-7d85-4402-8e64-1a749b3ef088)
       - ![image](https://github.com/user-attachments/assets/ff95128d-d441-41fa-bad3-230124cfc88d)
 
 -🔹 **STEP 5: Create CodeDeploy Application & Deployment Group**
     - Go to CodeDeploy → Create application
-       - Name: MyWebAppApp
-       - Platform: EC2/On-premise
-![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
-     - Create Deployment Group:
+      - Name: MyWebAppApp
+      - Platform: EC2/On-premise
+
+    - ![image](https://github.com/user-attachments/assets/48e6aa40-2c7e-455b-a09e-12246189fa0b)
+    - Create Deployment Group:
         - Name: MyWebAppDG
         - Environment: EC2
         - Tag: Name = CICD (should match EC2 tag)
@@ -67,7 +68,7 @@ This is your actual website file.
         - ❌ Uncheck Load Balancer
 
 - 🔹**STEP 6: Create CodeBuild Project**
-       - Go to CodeBuild → Create project
+     - Go to CodeBuild → Create project
        - Name: MyWebAppBuild
        - Source provider: AWS CodeCommit → Select my-web-app
        - Environment: Managed image (Amazon Linux 2)
@@ -75,8 +76,10 @@ This is your actual website file.
        - IAM Role: Create or select one with full access to CodeBuild
 
 -🔹**STEP 7: Create CodePipeline**
+
     - Go to CodePipeline → Create pipeline
     - Pipeline name: MyWebAppPipeline
+
     - **Source:**
        - Provider: AWS CodeCommit
        - Repo: my-web-app
@@ -91,10 +94,20 @@ This is your actual website file.
        
 - 🔹 **STEP 8: Final Output Check**
       - Once you push changes to the CodeCommit repo:
-        - Pipeline will trigger automatically
-        - Files will be built and deployed to /var/www/html on EC2
+      - Pipeline will trigger automatically
+      - Files will be built and deployed to /var/www/html on EC2
       - Visit: http://3.110.90.253/
       - You will see your deployed index.html page! 🎉
+
+       - ![image](https://github.com/user-attachments/assets/4925ba31-48fe-4151-8c9d-cc02155be0c2)
+       - Output
+       - ![image](https://github.com/user-attachments/assets/adc524ea-a42e-41fb-9954-1986b67b16af)
+
+
+
+
+
+
 
 - 🧱 Step 1: ✅ Create CodeBuild Project
 Go to AWS Console → CodeBuild
